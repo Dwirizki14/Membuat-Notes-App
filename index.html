@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <!-- Own Styles -->
+    <link rel="icon" href="/assets/favicon.png" sizes="512x512" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Notes App</h1>
+    </header>
+
+    <section class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search your notes..." />
+    </section>
+
+    <section class="add-note">
+      <h2>Tambah Catatan Baru</h2>
+      <p
+        id="errorMessage"
+        style="display: none; color: #d63384; margin-top: 8px; font-size: 14px"
+      ></p>
+      <form id="noteForm">
+        <input
+          type="text"
+          id="noteTitle"
+          placeholder="Judul catatan..."
+          required
+        />
+        <textarea
+          id="noteBody"
+          placeholder="Isi catatan..."
+          required
+        ></textarea>
+        <button type="submit">Simpan Catatan</button>
+      </form>
+    </section>
+
+    <main id="noteList"></main>
+
+    <script type="module" src="scripts/main.js"></script>
+  </body>
+</html>
